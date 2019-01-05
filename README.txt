@@ -1,6 +1,7 @@
-1) git clone https://github.com/stavco9/landmarksColman <localdirectory>
+1) git clone https://github.com/stavco9/landmarksColman <localdirectory> (only first time)
 2) cd <localdirectory>
-3) copy your python script to the directory
-4) git add .
-4) git commit -m "message"
-5) git push origin master
+3) git pull
+4) copy your python script to the directory
+5) git add .
+6) git commit -m "message"
+7) git push origin master
