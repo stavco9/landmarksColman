@@ -1,23 +1,27 @@
-﻿#$csv = Import-Csv -Path C:\DeepLearning\FinalProject\google-landmarks-dataset\test.csv
+﻿$csv = Import-Csv -Path "D:\Images\test.csv"
 
 $max = $csv.count - 1
 
-for($i = 1; $i -le 100; $i++){
+for($i = 0; $i -le $max; $i++){
+    $urlToDownload =  $csv[$i].url
 
-    $download = $false
+    $imageId = $csv[$i].id
 
-    while (!$download){
-        try{
-            $randNum = Get-Random -Maximum $max
-
-            $urlToDownload =  $csv[$randNum].url
-
-            $imageId = $csv[$randNum].id
-
-            Invoke-WebRequest -Uri $urlToDownload -OutFile "C:\DeepLearning\FinalProject\Test\$imageId.jpg"
-            
-            $download = $true   
-        }
-        catch{}
-    }
+    Invoke-WebRequest -Uri $urlToDownload -OutFile "D:\Images\Test\$imageId.jpg"    
 }
+
+#for($i = 1; $i -le 100; $i++){
+
+#    $download = $false
+
+#    while (!$download){
+#        try{
+#            $randNum = Get-Random -Maximum $max
+
+
+            
+#            $download = $true   
+#        }
+#        catch{}
+#    }
+#}
