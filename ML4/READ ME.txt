@@ -1,0 +1,10 @@
+This one is pretty stupid-
+he learns too slow, and the over fitting is VERY HIGH.
+batch 30 (higher than usual)
+learning rate 0.0001 (lower than usual)
+momentum 0.9 (usual)
+epochs 5
+
+suggestions:
+higher momentum
+higher learning rate due to perfect linear progression
