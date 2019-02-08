@@ -15,7 +15,7 @@ $FileName
 }
 
 # Root path of images
-$imagesPath = "C:\DeepLearning\FinalProject\Train\"
+$imagesPath = "C:\DeepLearning\RealImages\Train\"
 
 ls $imagesPath | foreach{
 
@@ -32,7 +32,9 @@ ls $imagesPath | foreach{
             if (!(IsJpegImage -FileName $jpg)){
 
                 # Remove this image
-                Remove-Item -Path $_.FullName -Force
+                #Remove-Item -Path $jpg -Force
+
+                $jpg >> C:\temp\error.txt
 
                 write "Removed $jpg"
             }
