@@ -1,5 +1,5 @@
-﻿$trainPath = "D:\Images\Train"
-$validationPath = "D:\Images\Validation"
+﻿$trainPath = "C:\DeepLearning\RealImages\Train"
+$validationPath = "C:\DeepLearning\RealImages\Train"
 
 ls $trainPath | foreach{
     if ($_.Name -like "*.csv"){
@@ -11,7 +11,7 @@ ls $trainPath | foreach{
 
         New-Item -ItemType Directory -Path "$validationPath\$classNum"
 
-        for($i = 1; $i -le 30; $i++){
+        for($i = 1; $i -le 100; $i++){
                 $download = $false
 
                 while (!$download){
